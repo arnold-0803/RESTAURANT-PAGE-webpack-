@@ -19,20 +19,20 @@ export default {
       template: "./src/main.html",
     }),
   ],
-  // module: {
-  //   rules: [
-  //     {
-  //       test: /\.css$/i,
-  //       use: ["style-loader", "css-loader"],
-  //     },
-  //     {
-  //       test: /\.html$/i,
-  //       use: ["html-loader"],
-  //     },
-  //     {
-  //       test: /\.(png|svg|jpg|jpeg|gif)$/i,
-  //       type: "asset/resource",
-  //     },
-  //   ],
-  // },
+  module: {
+    rules: [
+      // {
+      //   test: /\.css$/i,
+      //   use: ["style-loader", "css-loader"],
+      // },
+      {
+        test: /\.html$/i,
+        use: ["html-loader"],
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif|webp)$/i,
+        type: "asset/resource",
+      },
+    ],
+  },
 };

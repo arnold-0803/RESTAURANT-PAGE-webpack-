@@ -1,9 +1,29 @@
-import bannerImage from "../assets/background.webp";
+import loadHome from './home.js';
+import loadMenu from './menu.js';
+import loadAbout from './about.js';
 
-const image = document.createElement("img");
+const content = document.querySelector("#content");
+const homeButton = document.querySelector("#home");
+const menuButton = document.querySelector("#menu");
+const aboutButton = document.querySelector("#about");
 
-image.src = bannerImage;
 
-document.body.appendChild(image);
+homeButton.addEventListener("click", () => {
+  content.textContent = "";
 
-console.log(image);
+  loadHome();
+});
+
+menuButton.addEventListener("click", () => {
+  content.textContent = "";
+
+  loadMenu();
+});
+
+aboutButton.addEventListener("click", () => {
+  content.textContent = "";
+
+  loadAbout();
+});
+
+loadHome();
